@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
     when "hello"
       @coach_answer = "Great!"
     when "what time is it?"
-      @coach_answer = Time.now
+      @coach_answer = Time.now.strftime("%H:%M")
     when @my_question.end_with?("?") == true
       @coach_answer = "Silly question, get dressed and go to work!"
     else
